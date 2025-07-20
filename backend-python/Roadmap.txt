@@ -1,0 +1,140 @@
+
+---
+
+## 🚀 Phase 1: Planning & System Architecture
+
+### 1. **Break the Challenge into Modules**:
+
+Structure your system into the following components:
+
+* **Case Prep AI**
+* **AI Debaters (Beginner to Advanced)** #Beginner #Advanced #Intermediate
+* **POI Engine**
+* **AI Adjudicator**
+* **Multi-format Debate Handler**
+* **UI/UX Layer**
+* **Session Orchestrator (controls timing, roles, etc.)**
+
+### 2. **Tech Stack Suggestions**:
+
+* **Frontend**: React + Tailwind (or Next.js for flexibility)
+* **Backend**: Node.js or Flask for API logic
+* **LLMs**: OpenAI GPT-4o (or fine-tuned Gemini/GPT-3.5 for sub-modules)
+* **Audio**: Whisper ASR (for transcription), ElevenLabs or Coqui TTS
+* **Database**: Firebase or Supabase for session storage
+* **Realtime Comms**: Socket.IO or WebRTC if live interactions are needed
+
+---
+
+## 🧠 Phase 2: Core AI Capabilities
+
+### 🔹 A. **Case Prep Module**
+
+**Goal**: Given a motion, generate complete case outlines (Gov/Opp)
+
+* Input: Motion, format (e.g., BP, AP)
+* Output: Role-specific case files (intro, arguments, examples, rebuttals)
+* **Approach**: Prompt-chaining or toolformer-style planning (tool use)
+* Use prompt engineering for depth: “Debate as a Government Whip in BP…”
+
+---
+
+### 🔹 B. **AI Debaters**
+
+**Goal**: Simulate opponents with distinct skill levels
+
+* Skill Level Scaling:
+
+  * **Beginner**: Surface-level logic, formulaic structure
+  * **Intermediate**: Mid-depth analysis, simple rebuttals
+  * **Advanced**: Complex clash resolution, framing, weighing
+
+* Requirements:
+
+  * Role-aware (e.g., DPM rebuts PM and extends)
+  * Contextual memory (use LangChain or long-context GPT-4o)
+  * Tone: Clear transitions, logical markers, rhetorical finesse
+
+* Implement internal memory/state to maintain their stance over speeches
+
+---
+
+### 🔹 C. **POI Engine**
+
+**Goal**: Interject during speeches with smart POIs
+
+* Trigger logic (every \~45 seconds during speech)
+* Generate pointed, relevant POIs (challenge logic, request clarity, etc.)
+* Respond to how the user accepts/dismisses it
+* Use speaker diarization + NLP on human input to judge tone/response
+
+---
+
+### 🔹 D. **AI Adjudicator**
+
+**Goal**: Fair, structured feedback aligned with real debate metrics
+
+**Scoring Dimensions** (turn into rubric):
+
+* Argument strength (e.g., number + quality)
+* Engagement with opponent arguments
+* Strategic structure
+* POI handling
+* Persuasiveness & presentation
+
+**Output**:
+
+* Weighted scores per speaker + team
+* Natural language feedback (“The Whip failed to weigh impacts”)
+* Math-based logic (e.g., clash matrix with +1/-1/0 scoring per team)
+
+---
+
+## 💻 Phase 3: UI + System Integration
+
+### Key UI Elements:
+
+* Debate format selector (BP, AP, etc.)
+* Role selector
+* Timer + POI indicator
+* Transcript viewer + editable notes
+* Post-round Feedback page (score, CoT explanation, improvement tips)
+
+---
+
+## 🧪 Phase 4: Testing + Evaluation
+
+### Evaluation Focus:
+
+* Transcription Accuracy (use Whisper + custom filtering)
+* Skill Gap Simulation (unit test each AI level with scripted debates)
+* POI relevance (manual + automatic checks)
+* Judge fairness (simulate tied debates, edge cases)
+
+---
+
+## 📊 Deliverables to Prepare
+
+* Working Prototype (with demo scenarios)
+* Documentation:
+
+  * System architecture diagram
+  * Prompt structure (sample prompts)
+  * Adjudicator rubric algorithm (mathematical model)
+* Evaluation Comparison:
+
+  * Human vs AI judgment (include bias cases)
+  * Speed benchmarks (load time, response time)
+* User Guide / Setup Flow
+
+---
+
+## ⚒️ Starter Build Suggestion (Day 1–3 Plan)
+
+| Day   | Tasks                                                                  |
+| ----- | ---------------------------------------------------------------------- |
+| Day 1 | Setup repo, define system architecture, build case prep module         |
+| Day 2 | Implement AI debater + POI engine, dummy UI for session setup          |
+| Day 3 | Build adjudicator logic + feedback generator, basic evaluation metrics |
+| Day 4 | UI polish, connect modules, run mock sessions                          |
+| Day 5 | Final testing, documentation, prepare demo pitch                       |

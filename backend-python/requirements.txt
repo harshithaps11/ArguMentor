@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+# Add your AI, TTS, STT, and other dependencies here 

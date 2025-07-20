@@ -1,0 +1,67 @@
+1st Website 
+
+1.Information page/ How to use our ArguMentor 
+
+2.Debates 
+2.Select Debate Format 
+Asian Parliamentry 
+Normal Practice Debates 
+
+Asain 
+
+
+Select your Motion/Topic :-  
+1.Random Motions 
+
+
+Select your role 
+
+#Prime Minister 5 mins - Prime minster's speech has been done, the Opposition leader plz begin 
+#Opposition Leader 
+#Deputy PM 
+#Deputy OL 
+#Govt Whip 
+#Opposition Whip 
+
+
+1.Prime Minsiter 
+
+1.Speak - User 
+
+
+
+IMP 
+Judgement 
+
+AI judge 
+
+User - Feedback 
+
+Spoken - Text to speech 
+
+Verdict 
+
+
+
+
+Mock Debates 
+Choose your motion - tetx box 
+random motions 
+
+
+select your side of the motion - proposition/for the motion  or Opposition/against the motion 
+
+
+3 mins of opening statements - Opening statements has been done 
+2 min sof reply speeches - reply speeches has been done 
+QNA round 
+
+
+
+
+Judge - Ai model - speech to Feedback
+Note Assistant 
+
+5 - data/speech - text to speech 
+6. User - Thread Listen 
+

@@ -1,0 +1,96 @@
+.debateflow-bg {
+  min-height: 100vh;
+  background: #0f0f0f;
+  color: #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.debateflow-loading {
+  color: #a5b4fc;
+  font-size: 24px;
+  margin-top: 40vh;
+}
+.debateflow-speaker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.debateflow-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4f46e5;
+  box-shadow: 0 2px 12px rgba(79,70,229,0.13);
+  margin-bottom: 10px;
+  background: #23272f;
+}
+.debateflow-role {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #a5b4fc;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+.debateflow-speechbox {
+  background: #18181b;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+  padding: 24px 18px 18px 18px;
+  max-width: 600px;
+  width: 90vw;
+  margin: 0 auto 18px auto;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.debateflow-speechtext {
+  color: #f3f4f6;
+  font-size: 1.18rem;
+  text-align: center;
+  margin-bottom: 8px;
+  min-height: 2.2em;
+}
+.debateflow-controls {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  margin-top: 18px;
+}
+.debateflow-btn {
+  background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 22px;
+  padding: 10px 32px;
+  font-size: 1rem;
+  box-shadow: 0 2px 12px rgba(79,70,229,0.13);
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.debateflow-btn:disabled {
+  background: #23272f;
+  color: #888;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+@media (max-width: 600px) {
+  .debateflow-avatar {
+    width: 70px;
+    height: 70px;
+  }
+  .debateflow-speechbox {
+    padding: 12px 6px 10px 6px;
+    min-height: 60px;
+  }
+  .debateflow-btn {
+    padding: 8px 12vw;
+    font-size: 0.95rem;
+  }
+} 

@@ -1,3 +1,50 @@
+# ArguMentor Monorepo
+
+This monorepo contains:
+
+- `frontend/` - React app (UI, debate flow, API integration)
+- `backend-js/` - Node.js backend (user management, auth, DB)
+- `backend-python/` - FastAPI backend (AI, debate, TTS, STT, POI)
+
+## 🚀 Quick Start
+
+### 1. Start FastAPI backend
+
+```bash
+cd backend-python
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+### 2. Start Node.js backend
+
+```bash
+cd backend-js
+npm install
+npm run dev
+```
+
+### 3. Start Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## 🗂️ Structure
+
+- `/frontend` - React app (all UI, pages, API utils, assets)
+- `/backend-js` - Node.js backend (auth, user, DB, etc.)
+- `/backend-python` - FastAPI backend (AI, debate, TTS, STT, POI)
+
+## 🛠️ Development
+
+- Each backend is independent and can be started/stopped separately.
+- See each subfolder's README for details.
+
 # ArguMentor - AI-Powered Debate Simulation
 
 ArguMentor is an interactive web application that helps users practice and improve their debate skills through AI-powered simulations. Users can engage in parliamentary debates, receive real-time feedback from AI judges, and interact with intelligent AI opponents.
